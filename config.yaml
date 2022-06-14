@@ -1,0 +1,59 @@
+# Class [fogging, light]
+
+- 
+  class: fogging
+  name: fogging
+  active: true
+  pin: 16
+  hours:
+    - 
+      hour: "03:00"
+      elapsed_time: 5
+    - 
+      hour: "11:06"
+      elapsed_time: 15
+    - 
+      hour: "11:00"
+      elapsed_time: 5
+    - 
+      hour: "13:00"
+      elapsed_time: 10
+    - 
+      hour: "15:00"
+      elapsed_time: 5
+    - 
+      hour: "17:00"
+      elapsed_time: 10
+    - 
+      hour: "19:00"
+      elapsed_time: 5
+    - 
+      hour: "21:00"
+      elapsed_time: 10
+    - 
+      hour: "23:00"
+      elapsed_time: 15
+
+- 
+  class: light
+  name: light 1
+  active: true
+  pin: 18
+  start: "09:30"
+  end: "19:00"
+
+- 
+  class: light
+  name: light 2
+  active: true
+  pin: 22
+  start: "10:00"
+  end: "18:30"
+
+- 
+  class: light
+  name: light 3
+  active: true
+  pin: 36
+  start: "10:30"
+  end: "18:00"
