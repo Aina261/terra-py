@@ -47,7 +47,7 @@ def get_light_scheduler(light_class: list) -> None:
     
     
 def turn_on_light_if_in_range_on_boot(light_class: list):
-    logger.info(f"")
+    logger.info(f"Check if {light_class['name']} need to be on or offgit add . ")
     now = datetime.datetime.now()
     start = datetime.datetime.strptime(light_class['start'], '%H:%M').replace(year=now.year, month=now.month, day=now.day)
     end = datetime.datetime.strptime(light_class['end'], '%H:%M').replace(year=now.year, month=now.month, day=now.day)
@@ -110,10 +110,11 @@ def main():
     active_pin = get_active_pin(config)
     init_gpio(active_pin)
     for light_item in light:
-        turn_on_light_if_in_range_on_boot(light_item)
         get_light_scheduler(light_item)
     for fogger_item in fogging:
         get_fogger_scheduler(fogger_item)
+    for light_item in light:
+        turn_on_light_if_in_range_on_boot(light_item)
     while True:
         schedule.run_pending()
         time.sleep(1)
