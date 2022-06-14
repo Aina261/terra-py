@@ -4,7 +4,7 @@
   class: fogging
   name: fogging
   active: true
-  pin: 16
+  pin: 36
   hours:
     - 
       hour: "03:00"
@@ -38,7 +38,7 @@
   class: light
   name: light 1
   active: true
-  pin: 18
+  pin: 22
   start: "09:30"
   end: "19:00"
 
@@ -46,7 +46,7 @@
   class: light
   name: light 2
   active: true
-  pin: 22
+  pin: 18 
   start: "10:00"
   end: "18:30"
 
@@ -54,6 +54,6 @@
   class: light
   name: light 3
   active: true
-  pin: 36
+  pin: 16
   start: "10:30"
   end: "18:00"

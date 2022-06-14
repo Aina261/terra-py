@@ -1,0 +1,14 @@
+[Unit]
+Description=Terra Py is a tool to manage relay for aquarium and terrarium
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+User=root
+Type=simple
+ExecStart=/usr/bin/python3 /usr/bin/terra-py/terra_py.py
+StandardInput=tty-force
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

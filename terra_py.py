@@ -42,8 +42,8 @@ def get_fogger_scheduler(fogging_class: list) -> None:
 
 def get_light_scheduler(light_class: list) -> None:
     logger.info(f"Get light Scheduler for {light_class['name']}")
-    schedule.every().day.at(light_class['start']).do(turn_light_mode, light_class['pin'], light_class['name'])
-    schedule.every().day.at(light_class['end']).do(turn_light_mode, light_class['pin'], light_class['name'])
+    schedule.every().day.at(light_class['start']).do(turn_light_mode, light_class['pin'], light_class['name'], True)
+    schedule.every().day.at(light_class['end']).do(turn_light_mode, light_class['pin'], light_class['name'], False)
     
     
 def turn_on_light_if_in_range_on_boot(light_class: list):
